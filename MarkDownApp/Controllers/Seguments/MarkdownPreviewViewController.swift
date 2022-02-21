@@ -26,14 +26,13 @@ class MarkdownPreviewViewController: UIViewController {
     func setupViews(uiView: UIView) {
         let safeArea = view.safeAreaInsets
         
-        let partsArea_W = UIScreen.main.bounds.width - safeArea.left - safeArea.right
-        let partsArea_H = UIScreen.main.bounds.height - safeArea.top - safeArea.bottom
-        
+        let partsArea_W = UIScreen.main.bounds.width
+        let partsArea_H = UIScreen.main.bounds.height
         let margin_X = round(partsArea_W * 0.05)
         let margin_Y = round(partsArea_H * 0.05)
 
         let textView_W = partsArea_W - margin_X * 2
-        let textView_H = partsArea_H - margin_Y * 2 - 110
+        let textView_H = partsArea_H - margin_Y * 2 - 85
         let textView_X = margin_X
         let textView_Y = UIScreen.main.bounds.height - textView_H - safeArea.bottom - margin_Y
         

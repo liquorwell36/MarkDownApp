@@ -27,15 +27,11 @@ class MarkdownMemoViewController: UIViewController {
     private func setupTextView() {
         inputTextView.delegate = self
         inputTextView.keyboardType = .default
-        inputTextView.layer.cornerRadius = 20
-        inputTextView.layer.borderWidth = 1
-        inputTextView.layer.borderColor = UIColor(white: 0.9, alpha: 1).cgColor
         inputTextView.backgroundColor = .white
-        inputTextView.text = "Let's edit TextView!"
+        inputTextView.text = "# Let's edit TextView!</br>brok"
         Text.shared.text = inputTextView.text
-        inputTextView.font = UIFont.systemFont(ofSize: 18.0)
-        
-        inputTextView.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 8)
+        inputTextView.font = UIFont.systemFont(ofSize: 15.0)
+        //inputTextView.textContainerInset = UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 8)
         self.view.addSubview(inputTextView)
     }
     
@@ -47,14 +43,13 @@ class MarkdownMemoViewController: UIViewController {
     func setupViews(uiView: UIView) {
         let safeArea = view.safeAreaInsets
         
-        let partsArea_W = UIScreen.main.bounds.width - safeArea.left - safeArea.right
-        let partsArea_H = UIScreen.main.bounds.height - safeArea.top - safeArea.bottom
-        
+        let partsArea_W = UIScreen.main.bounds.width
+        let partsArea_H = UIScreen.main.bounds.height
         let margin_X = round(partsArea_W * 0.05)
         let margin_Y = round(partsArea_H * 0.05)
 
         let textView_W = partsArea_W - margin_X * 2
-        let textView_H = partsArea_H - margin_Y * 2 - 110
+        let textView_H = partsArea_H - margin_Y * 2 - 115
         let textView_X = margin_X
         let textView_Y = UIScreen.main.bounds.height - textView_H - safeArea.bottom - margin_Y
         

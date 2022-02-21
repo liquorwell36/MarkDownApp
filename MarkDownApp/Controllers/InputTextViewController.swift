@@ -25,10 +25,6 @@ class InputTextViewController: UIViewController {
         segmentButton.setTitle("Markdown", forSegmentAt: 0)
         segmentButton.setTitle("PreView", forSegmentAt: 1)
         
-        
-        MarkdownMemoVC.view.backgroundColor = UIColor.cyan
-        MarkdownPreviewVC.view.backgroundColor = UIColor.magenta
-        
         self.addChild(MarkdownPreviewVC)
         self.addChild(MarkdownMemoVC)
         
@@ -37,9 +33,6 @@ class InputTextViewController: UIViewController {
         
         MarkdownMemoVC.didMove(toParent: self)
         MarkdownPreviewVC.didMove(toParent: self)
-        
-        //self.view.sendSubviewToBack(MarkdownMemoVC.view)
-        //self.view.sendSubviewToBack(MarkdownPreviewVC.view)
         
         self.view.bringSubviewToFront(segmentButton)
     }
