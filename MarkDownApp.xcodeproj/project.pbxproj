@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10471BC73AEFF3DDF1F2C356 /* Pods_MarkDownApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CA23FA09043CD5A68B83D7 /* Pods_MarkDownApp.framework */; };
 		21D60BC727BE7FFF008018A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60BC627BE7FFF008018A2 /* AppDelegate.swift */; };
 		21D60BC927BE7FFF008018A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60BC827BE7FFF008018A2 /* SceneDelegate.swift */; };
 		21D60BCB27BE7FFF008018A2 /* DisplayNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60BCA27BE7FFF008018A2 /* DisplayNotesViewController.swift */; };
@@ -16,6 +17,7 @@
 		21D60BDB27BE8339008018A2 /* InputTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60BDA27BE8339008018A2 /* InputTextViewController.swift */; };
 		21D60BDE27BE87E9008018A2 /* MarkdownMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60BDD27BE87E9008018A2 /* MarkdownMemoViewController.swift */; };
 		21D60BE027BE87FF008018A2 /* MarkdownPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60BDF27BE87FE008018A2 /* MarkdownPreviewViewController.swift */; };
+		21D60BE427C3CCE3008018A2 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D60BE327C3CCE3008018A2 /* Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		21D60BDA27BE8339008018A2 /* InputTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextViewController.swift; sourceTree = "<group>"; };
 		21D60BDD27BE87E9008018A2 /* MarkdownMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownMemoViewController.swift; sourceTree = "<group>"; };
 		21D60BDF27BE87FE008018A2 /* MarkdownPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownPreviewViewController.swift; sourceTree = "<group>"; };
+		21D60BE327C3CCE3008018A2 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		6683F69034119A07E6A1EC0B /* Pods-MarkDownApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkDownApp.release.xcconfig"; path = "Target Support Files/Pods-MarkDownApp/Pods-MarkDownApp.release.xcconfig"; sourceTree = "<group>"; };
+		CF6484B9D06E38E32291DD2C /* Pods-MarkDownApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkDownApp.debug.xcconfig"; path = "Target Support Files/Pods-MarkDownApp/Pods-MarkDownApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F2CA23FA09043CD5A68B83D7 /* Pods_MarkDownApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarkDownApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10471BC73AEFF3DDF1F2C356 /* Pods_MarkDownApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,8 @@
 			children = (
 				21D60BC527BE7FFF008018A2 /* MarkDownApp */,
 				21D60BC427BE7FFF008018A2 /* Products */,
+				2A735377FF6EFE6791D23635 /* Pods */,
+				6C9993E509804BB7B1A5496B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,11 +71,10 @@
 		21D60BC527BE7FFF008018A2 /* MarkDownApp */ = {
 			isa = PBXGroup;
 			children = (
-				21D60BDC27BE87D3008018A2 /* Seguments */,
+				21D60BE227C3CCCF008018A2 /* Models */,
+				21D60BE127C30F2B008018A2 /* Controllers */,
 				21D60BC627BE7FFF008018A2 /* AppDelegate.swift */,
 				21D60BC827BE7FFF008018A2 /* SceneDelegate.swift */,
-				21D60BCA27BE7FFF008018A2 /* DisplayNotesViewController.swift */,
-				21D60BDA27BE8339008018A2 /* InputTextViewController.swift */,
 				21D60BCC27BE7FFF008018A2 /* Main.storyboard */,
 				21D60BCF27BE8001008018A2 /* Assets.xcassets */,
 				21D60BD127BE8001008018A2 /* LaunchScreen.storyboard */,
@@ -84,6 +92,41 @@
 			path = Seguments;
 			sourceTree = "<group>";
 		};
+		21D60BE127C30F2B008018A2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21D60BDA27BE8339008018A2 /* InputTextViewController.swift */,
+				21D60BCA27BE7FFF008018A2 /* DisplayNotesViewController.swift */,
+				21D60BDC27BE87D3008018A2 /* Seguments */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		21D60BE227C3CCCF008018A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				21D60BE327C3CCE3008018A2 /* Text.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2A735377FF6EFE6791D23635 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF6484B9D06E38E32291DD2C /* Pods-MarkDownApp.debug.xcconfig */,
+				6683F69034119A07E6A1EC0B /* Pods-MarkDownApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6C9993E509804BB7B1A5496B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2CA23FA09043CD5A68B83D7 /* Pods_MarkDownApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21D60BD727BE8001008018A2 /* Build configuration list for PBXNativeTarget "MarkDownApp" */;
 			buildPhases = (
+				4217AB707AE3754DB9DED7C8 /* [CP] Check Pods Manifest.lock */,
 				21D60BBF27BE7FFF008018A2 /* Sources */,
 				21D60BC027BE7FFF008018A2 /* Frameworks */,
 				21D60BC127BE7FFF008018A2 /* Resources */,
+				7550342490D5DEA73FD9817E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,6 +195,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4217AB707AE3754DB9DED7C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarkDownApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7550342490D5DEA73FD9817E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarkDownApp/Pods-MarkDownApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarkDownApp/Pods-MarkDownApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarkDownApp/Pods-MarkDownApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		21D60BBF27BE7FFF008018A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -158,6 +245,7 @@
 				21D60BDB27BE8339008018A2 /* InputTextViewController.swift in Sources */,
 				21D60BCB27BE7FFF008018A2 /* DisplayNotesViewController.swift in Sources */,
 				21D60BDE27BE87E9008018A2 /* MarkdownMemoViewController.swift in Sources */,
+				21D60BE427C3CCE3008018A2 /* Text.swift in Sources */,
 				21D60BE027BE87FF008018A2 /* MarkdownPreviewViewController.swift in Sources */,
 				21D60BC727BE7FFF008018A2 /* AppDelegate.swift in Sources */,
 				21D60BC927BE7FFF008018A2 /* SceneDelegate.swift in Sources */,
@@ -304,6 +392,7 @@
 		};
 		21D60BD827BE8001008018A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF6484B9D06E38E32291DD2C /* Pods-MarkDownApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -332,6 +421,7 @@
 		};
 		21D60BD927BE8001008018A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6683F69034119A07E6A1EC0B /* Pods-MarkDownApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

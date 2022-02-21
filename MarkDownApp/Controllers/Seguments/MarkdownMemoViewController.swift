@@ -16,8 +16,11 @@ class MarkdownMemoViewController: UIViewController {
         super.viewDidLoad()
         setupTextView()
         setupKeyboard()
+        print("MarkdownMemoVC viewDidloaded")
         NotificationCenter.default.addObserver(self, selector: #selector(kbWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(kbWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        self.view.isUserInteractionEnabled = true
+        
     }
     
     //MARK: - inputTextView UI setup
@@ -29,6 +32,7 @@ class MarkdownMemoViewController: UIViewController {
         inputTextView.layer.borderColor = UIColor(white: 0.9, alpha: 1).cgColor
         inputTextView.backgroundColor = .white
         inputTextView.text = "Let's edit TextView!"
+        Text.shared.text = inputTextView.text
         inputTextView.font = UIFont.systemFont(ofSize: 18.0)
         
         inputTextView.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 8)
@@ -37,10 +41,10 @@ class MarkdownMemoViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        setupViews()
+        setupViews(uiView: inputTextView)
     }
     
-    private func setupViews() {
+    func setupViews(uiView: UIView) {
         let safeArea = view.safeAreaInsets
         
         let partsArea_W = UIScreen.main.bounds.width - safeArea.left - safeArea.right
@@ -54,8 +58,8 @@ class MarkdownMemoViewController: UIViewController {
         let textView_X = margin_X
         let textView_Y = UIScreen.main.bounds.height - textView_H - safeArea.bottom - margin_Y
         
-        inputTextView.frame.size = CGSize(width: textView_W, height: textView_H)
-        inputTextView.frame.origin = CGPoint(x: textView_X, y: textView_Y)
+        uiView.frame.size = CGSize(width: textView_W, height: textView_H)
+        uiView.frame.origin = CGPoint(x: textView_X, y: textView_Y)
     }
     
     //MARK: - keyborad UI setup
@@ -124,6 +128,6 @@ extension MarkdownMemoViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         guard let inputText = inputTextView.text else { return }
-        print(inputText)
+        Text.shared.text = inputText
     }
 }
