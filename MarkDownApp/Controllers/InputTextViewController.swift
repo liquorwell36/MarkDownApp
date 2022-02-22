@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MarkdownView
 
 class InputTextViewController: UIViewController {
     
@@ -24,14 +25,14 @@ class InputTextViewController: UIViewController {
         segmentButton.setTitle("Markdown", forSegmentAt: 0)
         segmentButton.setTitle("PreView", forSegmentAt: 1)
         
+        self.addChild(MarkdownPreviewVC)
+        self.addChild(MarkdownMemoVC)
         
-        MarkdownMemoVC.view.backgroundColor = UIColor.cyan
-        MarkdownPreviewVC.view.backgroundColor = UIColor.magenta
-        self.view.addSubview(MarkdownMemoVC.view)
         self.view.addSubview(MarkdownPreviewVC.view)
+        self.view.addSubview(MarkdownMemoVC.view)
         
-        self.view.sendSubviewToBack(MarkdownMemoVC.view)
-        self.view.sendSubviewToBack(MarkdownPreviewVC.view)
+        MarkdownMemoVC.didMove(toParent: self)
+        MarkdownPreviewVC.didMove(toParent: self)
         
         self.view.bringSubviewToFront(segmentButton)
     }
@@ -44,6 +45,7 @@ class InputTextViewController: UIViewController {
         case 1:
             self.view.bringSubviewToFront(MarkdownPreviewVC.view)
             self.view.bringSubviewToFront(segmentButton)
+            MarkdownPreviewVC.foo(text: Text.shared.text)
         default:
             break
         }
